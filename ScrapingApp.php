@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+        
+<--
+im not good at gui.            
+-->
+        
 <style> 
         body 
         {
@@ -38,7 +43,7 @@
             border: none;
         }
     </style>
-    <title>Web Scraper</title>
+    <title>Google Scraper</title>
 </head>
 <body>
     <div class="form_div">
