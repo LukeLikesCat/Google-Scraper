@@ -1,8 +1,8 @@
 <?php
 
     $svn = "localhost";
-    $urn = "root";
-    $dbname = "googleresults";
+    $urn = "root"; 
+    $dbname = "googleresults"; 
 
     $dbcon = mysqli_connect($svn, $urn, "", $dbname);
 
@@ -20,7 +20,7 @@
             $this->data_array = $data_array;
             $this->dbcon = $dbcon;
         }
-
+        
         public function Create_Table() {
             self::$table_query = "CREATE TABLE Data_table$_POST[site_params] (";
             self::$insert_query = "INSERT INTO Data_table$_POST[site_params] (";
@@ -56,20 +56,8 @@
                 break;
             }
         }
-
-        public function Store_Data() {
-           foreach($this->data_array as $x => $bruh) {
-                foreach($bruh as $key => $b) {
-                    for($y = 0; $y < count($b); $y++) {
-                        self::$insert_query .= $bruh[0][$y].$bruh[1][$y].$bruh[2][$y].$bruh[3][$y]."<br><br>";
-                    }
-                    break;
-               }
-           }
-        }
     }
 
     $yep = new input_data(Start_search::$data_array, $dbcon);
     $yep->Create_Table();
-    // $yep->Store_Data();
 ?>
