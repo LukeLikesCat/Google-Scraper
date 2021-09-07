@@ -1,5 +1,7 @@
 <?php
 
+/*just stating the constructor function for the 
+child class "start_search" on "search.php"*/
 class Search {
     public static $data_array = array();
     protected $web_mods;
